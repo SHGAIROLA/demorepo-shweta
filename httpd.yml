@@ -12,7 +12,7 @@
         state: started
         enabled: true
     - name: deploy static website
-      copy:
+      win_template:
         src: index.html
         dest: /var/www/html/
 
