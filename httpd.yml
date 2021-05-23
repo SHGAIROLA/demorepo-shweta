@@ -1,0 +1,19 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+    - name: Install the latest version of Apache
+      yum:
+        name: httpd
+        state: latest
+    - name: start the latest version of Apache
+      service:
+        name: httpd
+        state: started
+        enabled: true
+    - name: deploy static website
+      copy:
+        src: index.html
+        destination: /var/www/html/
+
+ 
