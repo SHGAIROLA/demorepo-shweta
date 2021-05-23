@@ -1,2 +1,2 @@
-[webservers]
-18.219.138.210 ansible_user=ec2-user    
+#Dev-sql01
+webservers ansible_host=18.219.138.210 ansible_user=ec2-user
